@@ -2,6 +2,7 @@ package app
 
 import (
 	"database/sql"
+	"fmt"
 	"github.com/clD11/form3-payments/handler"
 	"github.com/clD11/form3-payments/model"
 	"github.com/go-pg/pg"
@@ -48,7 +49,7 @@ func (a *App) Run(host string) {
 }
 
 func (a *App) createDatabaseAndMigration(config *Config) {
-	a.ping()
+	a.ping(config)
 
 	db := pg.Connect(config.DB)
 
@@ -73,9 +74,10 @@ func (a *App) createDatabaseAndMigration(config *Config) {
 	a.DB = db
 }
 
-func (a *App) ping() {
-	conn, err := sql.Open("postgres", "host=postgres port=5432 user=postgres "+
-		"password=postgres dbname=postgres sslmode=disable")
+func (a *App) ping(config *Config) {
+	conn, err := sql.Open("postgres",
+		fmt.Sprintf("host=postgres port=5432 user=%s password=%s dbname=%d sslmode=disable",
+			config.DB.User, config.DB.Password, config.DB.Database))
 	if err != nil {
 		panic(err)
 	}
