@@ -7,7 +7,8 @@
     go build
     go test
 
-Integration tests uses TestContainers to spin up docker postgres database to run against
+Integration tests (_main_test.go_) uses TestContainers to spin up 
+containerised postgres database to run against.
 
 ### Run Application
     
