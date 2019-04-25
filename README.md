@@ -1,8 +1,10 @@
-# **Form3-Payments App**
+# **Form3 Payment API**
 
+* Clone the repository and if inside GOPATH might require export GO111MODULE=on to allow modules
 * Requires Docker and Docker Compose
 
 ### Run Tests
+Tests can be run using below commands or through IDE
  
     go build
     go test
