@@ -76,7 +76,7 @@ func (a *App) createDatabaseAndMigration(config *Config) {
 
 func (a *App) ping(config *Config) {
 	conn, err := sql.Open("postgres",
-		fmt.Sprintf("host=postgres port=5432 user=%s password=%s dbname=%d sslmode=disable",
+		fmt.Sprintf("host=postgres port=5432 user=%s password=%s dbname=%s sslmode=disable",
 			config.DB.User, config.DB.Password, config.DB.Database))
 	if err != nil {
 		panic(err)
