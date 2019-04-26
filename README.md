@@ -1,7 +1,8 @@
 # **Form3 Payment API**
 
-* Clone the repository and if inside GOPATH might require export GO111MODULE=on to allow modules
-* Requires Docker and Docker Compose
+* Clone the repository
+* Modules are used so if inside GOPATH run export GO111MODULE=on to allow modules
+* Docker Compose is need to run the application
 
 ### Run Tests
 Tests can be run using below commands or through IDE
@@ -9,8 +10,8 @@ Tests can be run using below commands or through IDE
     go build
     go test
 
-Integration tests (_main_test.go_) uses TestContainers to spin up 
-containerised postgres database to run against.
+Integration tests (_main_test.go_) uses TestContainers to spin up a
+containerised postgres database.
 
 ### Run Application
     
