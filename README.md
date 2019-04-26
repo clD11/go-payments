@@ -11,6 +11,14 @@ This is a simple web app offering an API to fetch, create, update and delete pay
 
 Application runs on _localhost:8080_
 
+| Http Method   | Endpoint          | Request            | Response
+| ------------- |:-----------------:|-------------------:|-------------------:|
+| GET           | /v1/payments/{id} | ID                 | JSON Payment       |
+| GET           | /v1/payments      | -                  | List JSON Payment  |  
+| POST          | /v1/payments      | ID, JSON Payment   | -                  |
+| PUT           | /v1/payments/{id} | JSON Payment       | -                  |
+| DELETE        | /v1/payments/{id} | ID                 | -                  |
+
 ### Running the Tests
 Integration tests are located in `main_test.go` and create a postgres database running in a docker container.
 Tests can be run using below command or through IDE. The container is created before the test suite runs and destroyed after.
