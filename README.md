@@ -1,5 +1,7 @@
 # **Form3 Payment API**
 
+This is a simple web app offering an API to fetch, create, update and delete payments
+
 * Clone the repository
 * Modules are used so if inside GOPATH run export GO111MODULE=on to allow modules
 * Docker Compose is need to run the application
