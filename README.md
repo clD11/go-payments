@@ -15,8 +15,8 @@ Application runs on _localhost:8080_
 | ------------- |:-----------------:|-------------------:|-------------------:|
 | GET           | /v1/payments/{id} | ID                 | JSON Payment       |
 | GET           | /v1/payments      | -                  | List JSON Payment  |  
-| POST          | /v1/payments      | ID, JSON Payment   | -                  |
-| PUT           | /v1/payments/{id} | JSON Payment       | -                  |
+| POST          | /v1/payments      | JSON Payment       | -                  |
+| PUT           | /v1/payments/{id} | ID, JSON Payment   | -                  |
 | DELETE        | /v1/payments/{id} | ID                 | -                  |
 
 ### Running the Tests
