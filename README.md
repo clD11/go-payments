@@ -1,4 +1,4 @@
-# **Form3 Payment API**
+# **Payment API**
 This is a simple web app offering an API to fetch, create, update and delete payments
 
 * Clone the repository
